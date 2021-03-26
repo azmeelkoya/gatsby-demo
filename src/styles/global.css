@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Montserrat";
+  color: black;
+}
+html, body {
+  min-height: 100%;
+}
+p {
+  margin: 16px auto;
+  line-height: 1.5em;
+}
+
+/* layout & nav */
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 40px auto;
+}
+nav .links {
+  display: inline-block;
+  text-align: right;
+}
+nav .links a {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: 400;
+  padding-bottom: 8px;
+  border-bottom: 3px solid transparent;
+}
+nav a:hover {
+  border-color: #04bf74;
+}
+footer p{
+  text-align: center;
+  color: rgb(32, 32, 32);
+  margin: 40px auto;
+}
+
+/* Home */
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  align-items: center;
+  height: 70vh;
+}
+.header h2 {
+  font-size: 4em;
+}
+.header h3 {
+  font-size: 3em;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.btn {
+  display: inline-block;
+  background: #04bf74;
+  padding: 13px 26px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+.header .image-div {
+  text-align: center;
+}
+.header .image-div img {
+  max-width: 80%;
+}
+
+/* about */
+.about h1{
+  margin: 80px 0 24px;
+  font-size: 3em;
+}
+.about {
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto 80px;
+}
+
+/* benchmarks */
+.benchmarks {
+  text-align: center;
+}
+.benchmarks > h2 {
+  font-size: 3em;
+  margin: 80px 0 10px;
+}
+.benchmarks > h3 {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.companies {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 80px;
+  margin: 80px 20px;
+  text-align: left;
+}
+.companies h3 {
+  text-align: center;
+  margin: 20px auto 20px;
+  font-weight: 500;
+}
+.companies p {
+  margin-top: 4px;
+}
+.companies a {
+  padding: 0 20px;
+  border: rgba(36,41,46,.1) 1px solid;
+  border-radius: 8px;
+  transition: all .3s;
+}
+.companies a:hover {
+  box-shadow: 15px 15px 50px rgb(0 0 0 / 8%);
+  transform: translateY(-4px);
+}
+
+/* company details */
+.details h2 {
+  font-size: 3.5em;
+  margin-bottom: 24px;
+}
+.details h3 {
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+  border: 12px solid #04bf74;
+  border-radius: 50%;
+  padding: 30px;
+  height: 135px;
+  width: 135px;
+}
+.details h3 span {
+  font-weight: 800;
+  font-size: 2.7em;
+}
+.details .flex {
+  display: flex;
+  margin-top: 80px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.details .left-div {
+  width: 60%;
+}
+.details .table-div table{
+  margin: 40px 0 80px;
+  width: 60%;
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+.details .table-div tr td {
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  padding: 8px;
+  line-height: 1.42857143;
+
+}
+.details .table-div tr td:first-child {
+  text-align: start;
+  background-color: #fff;
+  padding-left: 0;
+  font-weight: 400;
+  width: 25%;
+}
+
+@media (max-width: 1200px) {
+  .layout {
+    padding: 0 15px;
+  }
+  .header h2 {
+    font-size: 2.5em;
+  }
+  .header h3 {
+    font-size: 2em;
+  }
+  .companies {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    grid-template-columns: 1fr;
+    height: 100%;
+    margin-bottom: 80px;
+  }
+  .header div:first-child{
+    order: 1;
+  }
+  nav .links a {
+    display: block;
+  }
+  .companies {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+  .details .left-div {
+    width: 100%;
+  }
+  .details .table-div tr td {
+    max-width: 180px;
+    overflow: scroll;
+  }
+  .benchmarks > h2,
+  .details h2 {
+    font-size: 2.5em;
+  }
+  .benchmarks > h3 {
+    font-size: 1.6em;
+  }
+}
