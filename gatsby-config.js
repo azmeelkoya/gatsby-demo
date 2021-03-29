@@ -6,6 +6,9 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    siteUrl: `https://azmeel-gatsby-demo.netlify.app/`,
+  },
   plugins: [
     {
       resolve: `gatsby-transformer-excel`,
@@ -20,6 +23,7 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
+    `gatsby-plugin-sitemap`,
     
   ],
 }
